@@ -14,7 +14,7 @@ file in the project root directory, containing three entries:
 - `ECOFLOW_SECRET_KEY`: the secret key for the EcoFlow API that you got from EcoFlow
 - `ECOFLOW_ONE_SERIAL`: the serial number of a Wave 3 unit
 
-The EcoFlow-specific code resides in [`EcoFlowWave3Manager.kt`](./tree/main/app/src/main/java/com/commonsware/wave3api/EcoFlowWave3Manager.kt), while
+The EcoFlow-specific code resides in [`EcoFlowWave3Manager.kt`](https://github.com/commonsguy/Wave3API/blob/main/app/src/main/java/com/commonsware/wave3api/EcoFlowWave3Manager.kt), while
 `MainActivity.kt` contains a small Jetpack Compose-based UI.
 
 ## The Tests
@@ -75,7 +75,8 @@ call is for devices across the EcoFlow ecosystem.
 ### Getting Full State
 
 The `/iot-open/sign/device/quota/all` endpoint is documented to be "Query device's all quota infomation" [sic].
-The sample response shows that it should return a `data` JSON field containing a bunch of
+The sample response from the documentation
+shows that it should return a `data` JSON field containing a bunch of
 name/value pairs:
 
 ```json
@@ -140,7 +141,7 @@ An HTTP `PUT` request of some JSON to `/iot-open/sign/device/quota` lets you sen
 EcoFlow device. [The documentation for Wave air conditioners](https://developer.ecoflow.com/us/document/waveAir)
 shows that one of those commands is for "Remote startup/shutdown (1: Startup; 2: Standby; 3: Shutdown)".
 
-The sample command JSON shows the structure:
+The sample command JSON from the documentation shows the structure:
 
 ```json
 {
